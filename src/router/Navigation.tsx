@@ -10,11 +10,13 @@ import SettingsPage from '../pages/SetttingsPage/SettingsPage';
 import PaymentPage from '../pages/PaymentPage/PaymentPage';
 import ProductDetailsPage from '../pages/ProductDetailsPage/ProductDetailsPage';
 import { RootStack } from '../../types/types';
+import SplashPage from '../pages/SplashPage/SplashPage';
 
 function App() : React.ReactElement {
   return (
     <NavigationContainer>
-      <RootStack.Navigator initialRouteName="Welcome">
+      <RootStack.Navigator initialRouteName="Splash">
+        <RootStack.Screen name="Splash" component={SplashPage} />
         <RootStack.Screen name="Welcome" component={WelcomePage} />
         <RootStack.Screen name="Home" component={HomePage} />
         <RootStack.Screen name="Settings" component={SettingsPage} />
