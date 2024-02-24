@@ -1,15 +1,16 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
-import { DELI_BLUE, DELI_TEXT } from '../../assets/common'
+import styles from './styles'
 
+const CHEF_LOGO = require('../../assets/images/chef_logo.png');
 
 const SplashPage = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: DELI_BLUE }}>
-      <Image source={require('../../assets/logo.png')} style={{ width: 220, height: 250 }} />
-      <Text style={{fontSize: 20, color: DELI_TEXT, marginTop: 20, fontWeight: '800'}}>MultiDeli</Text>
+    <View style={styles.container}>
+      <Image source={CHEF_LOGO} style={styles.chefLogo} />
+      <Text style={styles.title}>MultiDeli</Text>
       <Text
-        style={{fontSize: 16, color: DELI_TEXT, marginTop: 20, fontWeight: '400'}}>
+        style={styles.description}>
         Multichoice's all in one app
       </Text>
     </View>
