@@ -1,10 +1,11 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React, { useRef } from 'react'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../../types/types';
 import { DELI_BLUE, DELI_DARK } from '../../assets/common';
 import SmallButton from '../../components/SmallButton/SmallButton';
 import BottomSheet, { BottomSheetMethods } from '@devvie/bottom-sheet';
+import HeroButton from '../../components/HeroButton/HeroButton';
 
 interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Product'>;
@@ -76,13 +77,37 @@ const ProductDetailsPage = ({ navigation }: IPageProps) => {
 
         </View>
       </View>
-      <BottomSheet ref={sheetRef}>
-        <Text>
-          The smart 😎, tiny 📦, and flexible 🎗 bottom sheet your app craves 🚀
-        </Text>
-      </BottomSheet>
+      <View >
+        <BottomSheet
+          containerHeight={500}
+          style={{ backgroundColor: '#131516' }}
+          ref={sheetRef}>
+          <Text style={{ color: 'white', fontSize: 24, textAlign: 'center', fontWeight: '400', marginTop: 10, lineHeight: 28 }}>
+            You are about to order a
+          </Text>
+          <Text style={{ color: 'white', fontSize: 24, textAlign: 'center', fontWeight: '400', lineHeight: 28 }}>
+            Beef Cheeseburger
+          </Text>
+          <HeroButton title='Go to Payments' onPress={() => navigation.navigate('Payment')} />
+          <TouchableOpacity
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginTop: 20,
+              backgroundColor: '#131516',
+              width: '100%',
+              height: 50,
+              borderRadius: 25,
+            }}
+            onPress={() => sheetRef.current?.close()}>
+            <Text style={{ color: 'white', fontSize: 16, textAlign: 'center' }}>Go back</Text>
+          </TouchableOpacity>
+        </BottomSheet>
+      </View>
     </View>
   )
 }
+
+//#0D0E0F7A
 
 export default ProductDetailsPage
