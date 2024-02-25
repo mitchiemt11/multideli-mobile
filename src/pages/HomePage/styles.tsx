@@ -25,6 +25,10 @@ const styles = StyleSheet.create({
     color: '#FFF',
     textAlign: 'center'
   },
+  Scroll: {
+    marginBottom: 15
+
+  },
   Location: {
     marginTop: 20,
     margin: 20,
