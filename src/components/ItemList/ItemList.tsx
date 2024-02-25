@@ -1,6 +1,12 @@
-import { View, Image, ScrollView } from 'react-native'
+import { View, Image, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react';
 import styles from './styles';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../../types/types';
+
+interface IPageProps {
+  navigation: NativeStackNavigationProp<RootStackParamList, keyof RootStackParamList>;
+}
 
 const items = [
   {
@@ -31,18 +37,25 @@ const items = [
   },
 ]
 
-const ItemList = () => {
+const ItemList = ({navigation}: IPageProps) => {
   return (
-     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-     <View style={styles.container}>
-       {items.map(item => (
-         <View key={item.id} style={styles.itemContainer}>
-           <Image source={item.image} style={styles.itemImage} />
-         </View>
-       ))}
-     </View>
-   </ScrollView>
-  )
-}
+    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      <View style={styles.container}>
+        {items.map(item => (
+          <View key={item.id} style={styles.itemContainer}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate('Product', {
+                  productId: item.id, // pass product id as param
+                })
+              }>
+              <Image source={item.image} style={styles.itemImage} />
+            </TouchableOpacity>
+          </View>
+        ))}
+      </View>
+    </ScrollView>
+  );
+};
 
 export default ItemList;

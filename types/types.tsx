@@ -6,7 +6,7 @@ export type RootStackParamList = {
   Home: undefined;
   Settings: undefined;
   Payment: undefined;
-  Product: { productId: string };
+  Product: { productId: number };
   ProductListPage: { categoryId: string };
 };
 

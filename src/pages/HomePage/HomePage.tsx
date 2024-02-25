@@ -1,7 +1,8 @@
-import { View, Button, Text, StatusBar, ScrollView } from 'react-native'
-import React from 'react'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../../types/types';
+
+import {View, Text, StatusBar, ScrollView} from 'react-native';
+import React from 'react';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../../types/types';
 import styles from './styles';
 import Banner from '../../components/Banner/Banner';
 import LocationCard from '../../components/LocationCard/LocationCard';
@@ -12,7 +13,7 @@ interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Home'>;
 }
 
-const HomePage = ({ navigation }: IPageProps) => {
+const HomePage = ({navigation}: IPageProps) => {
   return (
     <View style={styles.Container}>
       <StatusBar barStyle="light-content" />
@@ -29,22 +30,22 @@ const HomePage = ({ navigation }: IPageProps) => {
           </View>
         </View>
         <LocationCard />
-        <ItemList />
+        <ItemList navigation={navigation} />
         <View>
           <Text style={styles.OrderHeader}>Recent Orders</Text>
           <View style={styles.orderItemContainer}>
             <View>
-            <Text style={styles.orderItem}>Beef Cheese Burger</Text>
-            <Text style={styles.orderTime}>Today 14:30</Text>
+              <Text style={styles.orderItem}>Beef Cheese Burger</Text>
+              <Text style={styles.orderTime}>Today 14:30</Text>
             </View>
-            <View style= {styles.orderPriceContainer}>
+            <View style={styles.orderPriceContainer}>
               <Text style={styles.orderPrice}>-R25</Text>
             </View>
           </View>
           <View style={styles.orderItemContainer}>
             <View>
-            <Text style={styles.orderItem}>Beef Cheese Burger</Text>
-            <Text style={styles.orderTime}>Today 14:30</Text>
+              <Text style={styles.orderItem}>Beef Cheese Burger</Text>
+              <Text style={styles.orderTime}>Today 14:30</Text>
             </View>
             <View style={styles.orderPriceContainer}>
               <Text style={styles.orderPrice}>-R25</Text>
@@ -54,7 +55,7 @@ const HomePage = ({ navigation }: IPageProps) => {
       </ScrollView>
       <BottomNav navigation={navigation} />
     </View>
-  )
-}
+  );
+};
 
 export default HomePage;
