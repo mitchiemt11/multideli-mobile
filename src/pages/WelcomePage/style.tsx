@@ -1,26 +1,28 @@
 import { StyleSheet } from "react-native";
+import { DELI_TEXT } from "../../assets/common";
 
 const styles = StyleSheet.create({
   Button: {
     width: '90%',
-    backgroundColor: '#050547',
+    backgroundColor: '#ffff',
     height: 50,
-    borderRadius: 10,
+    borderRadius: 25,
     marginTop: 25,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   ButtonText: {
-    fontSize: 20,
-    color: '#fff',
-    textAlign: 'center',
-    marginTop: 10,
+    fontSize: 16,
+    fontWeight: '500',
+    color: DELI_TEXT,
+    lineHeight: 22,
   },
-  RegisterText: {
-    fontSize: 20,
-    color: '#050547',
-    textAlign: 'center',
-    textDecorationLine: 'underline',
-    marginTop: 10,
+  DashboardText: {
+    fontSize: 16,
+    color: DELI_TEXT,
+    marginTop: 6,
+    fontWeight: '500',
+    lineHeight: 22,
   },
   TextButton: {
     width: '100%',

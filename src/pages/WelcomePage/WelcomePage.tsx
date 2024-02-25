@@ -21,17 +21,19 @@ const WelcomePage = ({ navigation }: IPageProps) => {
         <Image source={FOOD_BAG} style={{ width: 200, height: 200 }} />
         <View>
           <Text style={{ fontSize: 40, lineHeight: 40, fontWeight: '500', color: '#0D0E0F', marginLeft: 40 }}>Welcome to the</Text>
-          <Text style={{ fontSize: 40, lineHeight: 40, fontWeight: '500', color: '#0D0E0F', marginLeft: 40 }}>universe of</Text>
+          <Text style={{ fontSize: 40, lineHeight: 40, fontWeight: '500', color: '#0D0E0F', marginLeft: 40, }}>universe of</Text>
           <Text style={{ fontSize: 40, lineHeight: 40, fontWeight: '500', color: '#0D0E0F', marginLeft: 40 }}>fresh office food</Text>
         </View>
         <Text style={{ textAlign: 'center', fontSize: 36, fontWeight: '400', color: '#0D0E0F', marginTop: 60, transform: [{ rotate: '345deg' }] }}>Sooo many</Text>
         <Text style={{ textAlign: 'center', fontSize: 36, fontWeight: '400', color: '#0D0E0F', transform: [{ rotate: '345deg' }] }}>options</Text>
+        <View style={{ marginTop: 60, alignContent: 'center', alignItems: 'center' }}> 
         <TouchableOpacity style={styles.Button}>
           <Text style={styles.ButtonText}>See how it works</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.TextButton}  >
-          <Text style={styles.RegisterText}>Skip and open dashhboard</Text>
+          <Text style={styles.DashboardText}>Skip and open dashhboard</Text>
         </TouchableOpacity>
+        </View>
       </View>
     </View>
   )
