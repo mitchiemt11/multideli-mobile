@@ -29,6 +29,27 @@ const HomePage = ({ navigation }: IPageProps) => {
         </View>
         <LocationCard />
         <ItemList />
+        <View>
+          <Text style={styles.OrderHeader}>Recent Orders</Text>
+          <View style={styles.orderItemContainer}>
+            <View>
+            <Text style={styles.orderItem}>Beef Cheese Burger</Text>
+            <Text style={styles.orderTime}>Today 14:30</Text>
+            </View>
+            <View style= {styles.orderPriceContainer}>
+              <Text style={styles.orderPrice}>-R25</Text>
+            </View>
+          </View>
+          <View style={styles.orderItemContainer}>
+            <View>
+            <Text style={styles.orderItem}>Beef Cheese Burger</Text>
+            <Text style={styles.orderTime}>Today 14:30</Text>
+            </View>
+            <View style={styles.orderPriceContainer}>
+              <Text style={styles.orderPrice}>-R25</Text>
+            </View>
+          </View>
+        </View>
       </ScrollView>
       <Button
         title="Go to Settings"

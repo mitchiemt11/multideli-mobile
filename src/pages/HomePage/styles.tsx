@@ -54,6 +54,39 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontWeight: '400',
   },
+  OrderHeader: {
+    fontSize: 20,
+    lineHeight: 20,
+    color: '#FFF',
+    fontWeight: '400',
+    margin: 20
+  },
+  orderItemContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    margin: 20,
+  },
+  orderItem: {
+    fontSize: 16,
+    lineHeight: 22,
+    color: '#FFF',
+    fontWeight: '400',
+  },
+  orderTime: {
+    fontSize: 14,
+    lineHeight: 20,
+    color: '#6E757C',
+    fontWeight: '400',
+  },
+  orderPriceContainer: {
+    justifyContent: 'center'
+  },
+  orderPrice: {
+    fontSize: 20,
+    lineHeight: 20,
+    color: '#FFF',
+    fontWeight: '500',
+  }
 });
 
 export default styles;
