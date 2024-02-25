@@ -6,6 +6,7 @@ import styles from './styles';
 import Banner from '../../components/Banner/Banner';
 import LocationCard from '../../components/LocationCard/LocationCard';
 import ItemList from '../../components/ItemList/ItemList';
+import BottomNav from '../../components/BottomNav/BottomNav';
 
 interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Home'>;
@@ -51,10 +52,7 @@ const HomePage = ({ navigation }: IPageProps) => {
           </View>
         </View>
       </ScrollView>
-      <Button
-        title="Go to Settings"
-        onPress={() => navigation.navigate('Settings')}
-      />
+      <BottomNav navigation={navigation} />
     </View>
   )
 }
