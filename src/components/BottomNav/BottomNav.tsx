@@ -38,7 +38,7 @@ export default function BottomNav({ navigation }: IPageProps) {
           onPress={() => navigation.navigate('Settings')}
           activeOpacity={0.5}>
           <>
-            <Text style={{ color: 'white' }}>Settings</Text>
+            <Image source={require('../../assets/images/settings.png')} style={styles.settingsIcon} />
           </>
         </TouchableOpacity>
 

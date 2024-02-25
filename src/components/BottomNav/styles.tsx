@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
-    top: -21,
+    top: -25,
     alignSelf: 'center',
   },
   scanIcon: {
@@ -28,6 +28,13 @@ const styles = StyleSheet.create({
     width: 36
   },
   homeIcon: {
+    height: 30,
+    width: 30,
+    marginTop: 10,
+    marginRight: 8,
+    marginLeft: 8
+  },
+  settingsIcon: {
     height: 32,
     width: 32,
     marginTop: 10,
