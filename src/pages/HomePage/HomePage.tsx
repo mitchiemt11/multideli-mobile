@@ -18,6 +18,12 @@ const HomePage = ({navigation}: IPageProps) => {
         <Text style={styles.Reminder}>It's time for lunch :) </Text>
       </View>
      <Banner/>
+     <View style={styles.Location}>
+        <Text style={styles.distanceHeader}>Nearest fridge</Text>
+        <View style={styles.timePill}>
+        <Text style={styles.time}>2 mins of walk </Text>
+        </View>
+      </View>
       <Button
         title="Go to Settings"
         onPress={() => navigation.navigate('Settings')}

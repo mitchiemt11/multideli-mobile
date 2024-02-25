@@ -25,6 +25,31 @@ const styles = StyleSheet.create({
     color: '#FFF',
     textAlign: 'center'
   },
+  Location: {
+    marginTop: 20,
+    margin: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  distanceHeader: {
+    fontSize: 20,
+    lineHeight: 20,
+    color: '#FFF',
+    fontWeight: '500',
+  },
+  timePill: {
+    backgroundColor: '#047857',
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+    borderRadius: 14,
+  },
+  time: {
+    fontSize: 16,
+    lineHeight: 16,
+    color: '#FFF',
+    fontWeight: '400',
+  },
 });
 
 export default styles;
