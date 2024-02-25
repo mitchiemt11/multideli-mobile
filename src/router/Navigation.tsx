@@ -17,7 +17,7 @@ function App() : React.ReactElement {
     <NavigationContainer>
       <RootStack.Navigator initialRouteName="Splash">
         <RootStack.Screen name="Splash" component={SplashPage} options={{ headerShown: false }} />
-        <RootStack.Screen name="Welcome" component={WelcomePage} />
+        <RootStack.Screen name="Welcome" component={WelcomePage}  options={{ headerShown: false }} />
         <RootStack.Screen name="Home" component={HomePage} />
         <RootStack.Screen name="Settings" component={SettingsPage} />
         <RootStack.Screen name="Payment" component={PaymentPage} />
