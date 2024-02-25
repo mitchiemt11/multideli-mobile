@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { DELI_DARK } from '../../assets/common';
+import { DELI_DARK, DELI_BLUE } from '../../assets/common';
 
 const styles = StyleSheet.create({
   container: {
@@ -12,17 +12,20 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderColor: '#6E757C'
   },
-
-  button: {
-    flex: 1,
+  scan: {
+    width: 90,
+    height: 90,
+    borderRadius: 90,
+    backgroundColor: DELI_BLUE,
+    justifyContent: 'center',
     alignItems: 'center',
-    justifyContent: 'center'
+    marginBottom: 20,
+    top: -21,
+    alignSelf: 'center',
   },
-
-  icon: {
-    width: 25,
-    height: 25,
-    tintColor: '#fff'
+  scanIcon: {
+    height: 36,
+    width: 36
   }
 });
 
