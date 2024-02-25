@@ -29,7 +29,9 @@ const WelcomePage = ({ navigation }: IPageProps) => {
           <TouchableOpacity style={styles.Button}>
             <Text style={styles.ButtonText}>See how it works</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.TextButton}  >
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Home')}
+            style={styles.TextButton}>
             <Text style={styles.DashboardText}>Skip and open dashhboard</Text>
           </TouchableOpacity>
         </View>
