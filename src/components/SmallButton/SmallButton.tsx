@@ -18,7 +18,7 @@ const SmallButton = ({color, title, onPress}: SmallButtonProps) => {
       }}
       onPress={onPress}
     >
-      <Text style={{color:'#fff', textAlign:'center'}}>{title}</Text>
+      <Text style={{color:'#fff', textAlign:'center', fontSize: 16}}>{title}</Text>
     </TouchableOpacity>
   )
 }
