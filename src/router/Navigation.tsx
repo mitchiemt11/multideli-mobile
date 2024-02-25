@@ -18,10 +18,10 @@ function App() : React.ReactElement {
       <RootStack.Navigator initialRouteName="Splash">
         <RootStack.Screen name="Splash" component={SplashPage} options={{ headerShown: false }} />
         <RootStack.Screen name="Welcome" component={WelcomePage}  options={{ headerShown: false }} />
-        <RootStack.Screen name="Home" component={HomePage} options={{ headerShown: false }}/>
+        <RootStack.Screen name="Home" component={HomePage} options={{ headerShown: false }} />
         <RootStack.Screen name="Settings" component={SettingsPage} />
         <RootStack.Screen name="Payment" component={PaymentPage} />
-        <RootStack.Screen name="Product" component={ProductDetailsPage} />
+        <RootStack.Screen name="Product" component={ProductDetailsPage} options={{ headerShown: false }} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
