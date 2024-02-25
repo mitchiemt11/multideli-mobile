@@ -26,6 +26,13 @@ const styles = StyleSheet.create({
   scanIcon: {
     height: 36,
     width: 36
+  },
+  homeIcon: {
+    height: 32,
+    width: 32,
+    marginTop: 10,
+    marginRight: 8,
+    marginLeft: 8
   }
 });
 

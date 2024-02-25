@@ -14,7 +14,7 @@ function ActionButton() {
       style={styles.scan}
       onPress={() => console.log("Pressed")}
     >
-    <Image source={require('../../assets/images/scan.png')} style={styles.scanIcon} />
+      <Image source={require('../../assets/images/scan.png')} style={styles.scanIcon} />
     </TouchableOpacity>
   )
 }
@@ -22,25 +22,25 @@ function ActionButton() {
 export default function BottomNav({ navigation }: IPageProps) {
   return (
     <>
-      <View style= {styles.container}>
+      <View style={styles.container}>
         <TouchableOpacity
           onPress={() => navigation.navigate('Home')}
           activeOpacity={0.5}>
           <>
-            <Text style={{color: 'white'}}>Home</Text>
+            <Image source={require('../../assets/images/home.png')} style={styles.homeIcon} />
           </>
         </TouchableOpacity>
-          <View>
-            <ActionButton/>
-          </View>
+        <View>
+          <ActionButton />
+        </View>
 
-          <TouchableOpacity
-            onPress={() => navigation.navigate('Settings')}
-            activeOpacity={0.5}>
-            <>
-              <Text style={{color: 'white'}}>Settings</Text>
-            </>
-          </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Settings')}
+          activeOpacity={0.5}>
+          <>
+            <Text style={{ color: 'white' }}>Settings</Text>
+          </>
+        </TouchableOpacity>
 
       </View>
     </>
