@@ -2,7 +2,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React, { useRef } from 'react'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../../types/types';
-import { DELI_BLUE, DELI_DARK } from '../../assets/common';
+import { DELI_BLUE, DELI_DARK, DELI_TEXT } from '../../assets/common';
 import SmallButton from '../../components/SmallButton/SmallButton';
 import BottomSheet, { BottomSheetMethods } from '@devvie/bottom-sheet';
 import HeroButton from '../../components/HeroButton/HeroButton';
@@ -88,7 +88,7 @@ const ProductDetailsPage = ({ navigation }: IPageProps) => {
           <Text style={{ color: 'white', fontSize: 24, textAlign: 'center', fontWeight: '400', lineHeight: 28 }}>
             Beef Cheeseburger
           </Text>
-          <HeroButton title='Go to Payments' onPress={() => navigation.navigate('Payment')} />
+          <HeroButton title='Go to Payments' onPress={() => navigation.navigate('Payment')} textColor={DELI_TEXT} />
           <TouchableOpacity
             style={{
               alignItems: 'center',

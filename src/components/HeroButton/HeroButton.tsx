@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
 import styles from './styles';
+import { DELI_BLUE } from '../../assets/common';
 
 interface IProps {
   title: string,
@@ -13,7 +14,7 @@ const HeroButton = ({ title, onPress, bgcolor, textColor }: IProps) => {
   const dynamicStyles = StyleSheet.create({
     Button: {
       width: '100%',
-      backgroundColor: bgcolor ? bgcolor : '#007bff',
+      backgroundColor: bgcolor ? bgcolor : DELI_BLUE,
       height: 50,
       borderRadius: 25,
       marginTop: 25,
