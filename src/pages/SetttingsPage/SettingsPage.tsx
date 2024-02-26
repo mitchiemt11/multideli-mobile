@@ -3,10 +3,18 @@ import React from 'react'
 import SettingsCard from '../../components/SettingsCard/SettingsCard'
 import ContactCard from '../../components/ContactCard/ContactCard'
 import PinCard from '../../components/PinCard/PinCard'
-import styles from './styles'
-import HeroButton from '../../components/HeroButton/HeroButton'
+import styles from './styles';
+import HeroButton from '../../components/HeroButton/HeroButton';
+import BottomNav from '../../components/BottomNav/BottomNav';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../../types/types';
 
-const SettingsPage = () => {
+
+interface IProps {
+  navigation: NativeStackNavigationProp<RootStackParamList, 'Home'>;
+};
+
+const SettingsPage = ({navigation}: IProps) => {
   return (
     <View style={styles.container}>
       <SettingsCard
@@ -44,6 +52,7 @@ const SettingsPage = () => {
         bgcolor="red"
         onPress={() => console.log('Log out')}
       />
+      {/* <BottomNav navigation={navigation}/> */}
     </View>
   )
 }
