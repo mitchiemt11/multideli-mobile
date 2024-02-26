@@ -4,6 +4,7 @@ import SettingsCard from '../../components/SettingsCard/SettingsCard'
 import ContactCard from '../../components/ContactCard/ContactCard'
 import PinCard from '../../components/PinCard/PinCard'
 import styles from './styles'
+import HeroButton from '../../components/HeroButton/HeroButton'
 
 const SettingsPage = () => {
   return (
@@ -37,6 +38,11 @@ const SettingsPage = () => {
         title="Additional"
         icon={require('../../assets/images/additional.png')}
         onPress={() => console.log('Additional')}
+      />
+      <HeroButton
+        title="Log out"
+        bgcolor="red"
+        onPress={() => console.log('Log out')}
       />
     </View>
   )
