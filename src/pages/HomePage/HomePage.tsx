@@ -8,12 +8,18 @@ import Banner from '../../components/Banner/Banner';
 import LocationCard from '../../components/LocationCard/LocationCard';
 import ItemList from '../../components/ItemList/ItemList';
 import BottomNav from '../../components/BottomNav/BottomNav';
+import { useSelector } from 'react-redux';
 
 interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Home'>;
 }
 
 const HomePage = ({navigation}: IPageProps) => {
+
+  // const list = useSelector(state => state.list);
+
+  // console.log("❌", list)
+
   return (
     <View style={styles.Container}>
       <StatusBar barStyle="light-content" />
