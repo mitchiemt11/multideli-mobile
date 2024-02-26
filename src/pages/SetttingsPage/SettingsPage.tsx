@@ -11,6 +11,16 @@ const SettingsPage = () => {
         icon={require('../../assets/images/money.png')}
         onPress={() => console.log('PaymentMethods')}
       />
+       <SettingsCard
+        title="Personal details"
+        icon={require('../../assets/images/personal.png')}
+        onPress={() => console.log('Personal Details')}
+      />
+       <SettingsCard
+        title="Additional"
+        icon={require('../../assets/images/additional.png')}
+        onPress={() => console.log('Additional')}
+      />
     </View>
   )
 }
