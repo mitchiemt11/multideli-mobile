@@ -1,11 +1,16 @@
-import { View, Text, Button } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
-import { DELI_DARK } from '../../assets/common'
+import SettingsCard from '../../components/SettingsCard/SettingsCard'
+import styles from './styles'
 
-const SettingsPage = ({navigation}: any) => {
+const SettingsPage = () => {
   return (
-    <View style={{ flex: 1, backgroundColor: DELI_DARK }}>
-      <Text style={{color: 'white', margin: 50, fontSize: 40}}>Settings Page</Text>
+    <View style={styles.container}>
+      <SettingsCard
+        title="Payment methods"
+        icon={require('../../assets/images/money.png')}
+        onPress={() => console.log('PaymentMethods')}
+      />
     </View>
   )
 }

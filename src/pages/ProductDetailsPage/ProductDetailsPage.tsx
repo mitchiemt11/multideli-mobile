@@ -55,7 +55,7 @@ const ProductDetailsPage = ({ navigation }: IPageProps) => {
             }}
           >
             <Image source={require('../../assets/images/spicy.png')} style={{ width: 12, height: 17 }} />
-            <Text style={{ color: 'white', fontSize: 16, textAlign: 'center', marginLeft: 5 }}>A bit spicy but not too much</Text>
+            <Text style={{ color: 'white', fontSize: 16, textAlign: 'center', marginLeft: 5 }}>A bit spicy, but not too much</Text>
           </View>
         </View>
         <View style={{ flexDirection: 'row', marginTop: 20 }}>
@@ -100,7 +100,7 @@ const ProductDetailsPage = ({ navigation }: IPageProps) => {
               borderRadius: 25,
             }}
             onPress={() => sheetRef.current?.close()}>
-            <Text style={{ color: 'white', fontSize: 16, textAlign: 'center' }}>Go back</Text>
+            <Text style={{ color: 'white', fontSize: 22, textAlign: 'center', lineHeight: 22 }}>Go back</Text>
           </TouchableOpacity>
         </BottomSheet>
       </View>
@@ -108,6 +108,4 @@ const ProductDetailsPage = ({ navigation }: IPageProps) => {
   )
 }
 
-//#0D0E0F7A
-
-export default ProductDetailsPage
+export default ProductDetailsPage;
