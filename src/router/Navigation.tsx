@@ -11,6 +11,7 @@ import PaymentPage from '../pages/PaymentPage/PaymentPage';
 import ProductDetailsPage from '../pages/ProductDetailsPage/ProductDetailsPage';
 import { RootStack } from '../../types/types';
 import SplashPage from '../pages/SplashPage/SplashPage';
+import { DELI_DARK } from '../assets/common';
 
 function App() : React.ReactElement {
   return (
@@ -19,7 +20,18 @@ function App() : React.ReactElement {
         <RootStack.Screen name="Splash" component={SplashPage} options={{ headerShown: false }} />
         <RootStack.Screen name="Welcome" component={WelcomePage}  options={{ headerShown: false }} />
         <RootStack.Screen name="Home" component={HomePage} options={{ headerShown: false }} />
-        <RootStack.Screen name="Settings" component={SettingsPage}  />
+        <RootStack.Screen name="Settings" options={{
+          headerStyle: {
+            backgroundColor: DELI_DARK,
+          },
+          headerBackTitleVisible: false,
+          headerTitleStyle: {
+            color: 'white',
+            fontWeight: 'bold',
+            fontSize: 26,
+          },
+          animationTypeForReplace: 'pop',
+        }} component={SettingsPage}  />
         <RootStack.Screen name="Payment" component={PaymentPage} />
         <RootStack.Screen name="Product" component={ProductDetailsPage} options={{ headerShown: false }} />
       </RootStack.Navigator>

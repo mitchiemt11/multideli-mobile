@@ -28,7 +28,7 @@ const ItemList = ({navigation}: IPageProps) => {
             <TouchableOpacity
               onPress={() =>
                 navigation.navigate('Product', {
-                  productId: item.id,
+                  id: item.id,
                 })
               }>
               <Image source={item.image} style={styles.itemImage} />

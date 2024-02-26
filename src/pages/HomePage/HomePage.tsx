@@ -14,11 +14,23 @@ interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Home'>;
 }
 
+interface Item {
+  name: string;
+  id: number;
+  image: string;
+  displayImage: string;
+  description: string;
+  price: number;
+  grams: number;
+  calories: number;
+  info: string;
+
+}
+
 const HomePage = ({navigation}: IPageProps) => {
 
-  // const list = useSelector(state => state.list);
-
-  // console.log("❌", list)
+  const list = useSelector((state: {list: Item[]}) => state.list);
+  console.log("✅✅✅", JSON.stringify(list, null, 2))
 
   return (
     <View style={styles.Container}>
