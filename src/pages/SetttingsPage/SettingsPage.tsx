@@ -1,8 +1,9 @@
 import { View } from 'react-native'
 import React from 'react'
 import SettingsCard from '../../components/SettingsCard/SettingsCard'
-import styles from './styles'
 import ContactCard from '../../components/ContactCard/ContactCard'
+import PinCard from '../../components/PinCard/PinCard'
+import styles from './styles'
 
 const SettingsPage = () => {
   return (
@@ -27,6 +28,11 @@ const SettingsPage = () => {
         details="+27 83 123 4567"
         onPress={() => console.log('Contact')}
       />
+      <PinCard
+        title="PIN Code"
+        onPress={() => console.log('PIN')}
+      />
+      
       <SettingsCard
         title="Additional"
         icon={require('../../assets/images/additional.png')}
