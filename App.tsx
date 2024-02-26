@@ -1,34 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-} from 'react-native';
+import Navigation from './src/router/Navigation';
+import { store } from './src/app/store';
+import { Provider } from 'react-redux'
 
 function App(): React.JSX.Element {
 
   return (
-    <SafeAreaView>
-      <Text style={styles.container}>MultiDeli App</Text>
-    </SafeAreaView>
+    <>
+      <Provider store={store}>
+        <Navigation />
+      </Provider>
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-    fontSize: 30,
-    textAlign: 'center',
-  }
-});
 
 export default App;
