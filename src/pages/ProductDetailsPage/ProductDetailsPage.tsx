@@ -6,40 +6,57 @@ import { DELI_BLUE, DELI_DARK, DELI_TEXT } from '../../assets/common';
 import SmallButton from '../../components/SmallButton/SmallButton';
 import BottomSheet, { BottomSheetMethods } from '@devvie/bottom-sheet';
 import HeroButton from '../../components/HeroButton/HeroButton';
+import { useDispatch, useSelector } from 'react-redux';
+import { Item } from '../../components/ItemList/ItemList';
+import type { RouteProp } from '@react-navigation/native';
+import { addOrder } from '../../features/addOrder/addOrderSlice';
 
 interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Product'>;
+  route: RouteProp<RootStackParamList, 'Product'>
 }
 
-const ProductDetailsPage = ({ navigation }: IPageProps) => {
+const ProductDetailsPage = ({ navigation, route }: IPageProps) => {
+
+  const items = useSelector((state: {list: Item[]}) => state.list);
+  const dispatch = useDispatch()
+
+  const item = items.find(item => Number(item.id) === Number(route.params.id));
+
+  if(!item) {
+    return <Text>Item not found</Text>
+  }
+
+  const addToRecentOrder = (item: Item) => {
+    dispatch(addOrder(item));
+  }
+ 
+
+
   const sheetRef = useRef<BottomSheetMethods>(null)
   return (
     <View style={{ flex: 1, backgroundColor: DELI_DARK }}>
       <Image source={require('../../assets/images/product.png')} style={{ width: '100%', height: 320, objectFit: 'cover' }} />
       <View style={{ padding: 20 }}>
-        <Text style={{ color: 'white', fontSize: 28, lineHeight: 26, fontWeight: '700' }}>Beef Cheeseburger</Text>
+        <Text style={{ color: 'white', fontSize: 28, lineHeight: 26, fontWeight: '700' }}>{item.name}</Text>
         <View style={{ flexDirection: 'row', marginTop: 20 }}>
           <Text style={{ color: 'white', fontSize: 15, fontWeight: '400', lineHeight: 20 }}>
-            A perfectly seasoned beef patty, covered with melted cheese
-            and topped with pickles, onion, ketchup and mustard- all encased
-            in a soft brioche bun. Who wants a cheeseburger that tastes
-            better than your favourite takeaway version?!
-            Perfect for family burger night- or any time.
+            {item.description}
           </Text>
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 }}>
           <View style={{ flexDirection: 'row' }}>
             <Image source={require('../../assets/images/grams.png')} style={{ width: 16, height: 15, alignSelf: 'center' }} />
-            <Text style={{ color: '#FFFFFFA3', fontSize: 14, fontWeight: '500', lineHeight: 22 }}> 325g</Text>
+            <Text style={{ color: '#FFFFFFA3', fontSize: 14, fontWeight: '500', lineHeight: 22 }}> {item.grams}g</Text>
           </View>
           <View style={{ flexDirection: 'row' }}>
             <Image source={require('../../assets/images/fire.png')} style={{ width: 12, height: 17, alignSelf: 'center' }} />
-            <Text style={{ color: '#FFFFFFA3', fontSize: 14, fontWeight: '500', lineHeight: 22 }}> 527 kcal</Text>
+            <Text style={{ color: '#FFFFFFA3', fontSize: 14, fontWeight: '500', lineHeight: 22 }}> {item.calories} kcal</Text>
 
           </View>
           <View style={{ flexDirection: 'row' }}>
             <Image source={require('../../assets/images/info.png')} style={{ width: 16, height: 16, alignSelf: 'center' }} />
-            <Text style={{ color: '#FFFFFFA3', fontSize: 14, fontWeight: '500', lineHeight: 22, marginRight: 8 }}> Non-vegan</Text>
+            <Text style={{ color: '#FFFFFFA3', fontSize: 14, fontWeight: '500', lineHeight: 22, marginRight: 8 }}> {item.info}</Text>
           </View>
         </View>
         <View>
@@ -59,7 +76,7 @@ const ProductDetailsPage = ({ navigation }: IPageProps) => {
           </View>
         </View>
         <View style={{ flexDirection: 'row', marginTop: 20 }}>
-          <Text style={{ color: 'white', fontSize: 26 }}>R25</Text>
+          <Text style={{ color: 'white', fontSize: 26 }}>R{item.price}</Text>
           <Text style={{ color: '#FFFFFFA3', fontSize: 14, marginLeft: 8, alignSelf: 'center' }}>3 available</Text>
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 60 }}>
@@ -86,9 +103,16 @@ const ProductDetailsPage = ({ navigation }: IPageProps) => {
             You are about to order a
           </Text>
           <Text style={{ color: 'white', fontSize: 24, textAlign: 'center', fontWeight: '400', lineHeight: 28 }}>
-            Beef Cheeseburger
+            {item.name}
           </Text>
-          <HeroButton title='Go to Payments' onPress={() => navigation.navigate('Payment')} textColor={DELI_TEXT} />
+          <HeroButton
+            title='Go to Payments'
+            onPress={() => {
+              addToRecentOrder(item);
+              navigation.navigate('Payment')
+            }}
+            textColor={DELI_TEXT}
+          />
           <TouchableOpacity
             style={{
               alignItems: 'center',

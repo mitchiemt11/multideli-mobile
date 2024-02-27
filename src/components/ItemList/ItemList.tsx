@@ -9,9 +9,15 @@ interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, keyof RootStackParamList>;
 }
 
-interface Item {
+export interface Item {
   id: string;
   image: string;
+  name: string;
+  description: string;
+  grams: string;
+  calories: string;
+  info: string;
+  price: number;
 }
 
 const ItemList = ({navigation}: IPageProps) => {
@@ -28,7 +34,7 @@ const ItemList = ({navigation}: IPageProps) => {
             <TouchableOpacity
               onPress={() =>
                 navigation.navigate('Product', {
-                  id: item.id,
+                  id: Number(item.id),
                 })
               }>
               <Image source={item.image} style={styles.itemImage} />

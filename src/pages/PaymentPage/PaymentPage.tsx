@@ -10,8 +10,7 @@ interface IPageProps {
 const PaymentPage = ({navigation}: IPageProps) => {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Payment Page</Text>
-
+     
     </View>
 
   )

@@ -2,9 +2,12 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface Order {
-  name: string;
   id: number;
+  name: string;
+  timestamp: Date;
+  price: number;
 }
+
 
 export interface OrderState extends Array<Order> {}
 
@@ -16,8 +19,10 @@ export const OrderSlice = createSlice({
   reducers: {
     addOrder: (state, action: PayloadAction<any>) => {
       state.push({
-        name: action.payload,
-        id: state.length +  1,
+        id: Date.now(),
+        name: action.payload.name,
+        timestamp: action.payload.timestamp,
+        price: action.payload.price,
       })
     },
   },

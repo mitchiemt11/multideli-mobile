@@ -29,9 +29,8 @@ interface Item {
 
 const HomePage = ({navigation}: IPageProps) => {
 
-  const list = useSelector((state: {list: Item[]}) => state.list);
-  console.log("✅✅✅", JSON.stringify(list, null, 2))
-
+  const recentOrders = useSelector((state: {list: Item[]}) => state.list);
+ 
   return (
     <View style={styles.Container}>
       <StatusBar barStyle="light-content" />
@@ -48,7 +47,7 @@ const HomePage = ({navigation}: IPageProps) => {
           </View>
         </View>
         <LocationCard />
-        <ItemList navigation={navigation} />
+        <ItemList navigation={navigation}/>
         <View>
           <Text style={styles.OrderHeader}>Recent Orders</Text>
           <View style={styles.orderItemContainer}>
