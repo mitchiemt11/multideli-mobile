@@ -30,6 +30,10 @@ interface Item {
 const HomePage = ({navigation}: IPageProps) => {
 
   const recentOrders = useSelector((state: {list: Item[]}) => state.list);
+
+  const recentOrdersDisplay = recentOrders.slice(recentOrders.length - 2);
+
+  console.log("BNBNBNBBNB", recentOrdersDisplay);
  
   return (
     <View style={styles.Container}>

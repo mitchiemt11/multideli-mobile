@@ -30,8 +30,6 @@ const ProductDetailsPage = ({ navigation, route }: IPageProps) => {
   const addToRecentOrder = (item: Item) => {
     dispatch(addOrder(item));
   }
- 
-
 
   const sheetRef = useRef<BottomSheetMethods>(null)
   return (
@@ -106,10 +104,10 @@ const ProductDetailsPage = ({ navigation, route }: IPageProps) => {
             {item.name}
           </Text>
           <HeroButton
-            title='Go to Payments'
+            title='Pay'
             onPress={() => {
               addToRecentOrder(item);
-              navigation.navigate('Payment')
+              navigation.navigate('Home')
             }}
             textColor={DELI_TEXT}
           />

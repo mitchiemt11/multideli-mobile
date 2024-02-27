@@ -14,7 +14,6 @@ const FOOD_BAG = require('../../assets/images/food_bag.png');
 
 const WelcomePage = ({ navigation }: IPageProps) => {
   return (
-    <ScrollView>
       <View style={styles.Container}>
         <SafeAreaView />
         <View>
@@ -40,7 +39,6 @@ const WelcomePage = ({ navigation }: IPageProps) => {
           </View>
         </View>
       </View>
-    </ScrollView>
   )
 }
 
