@@ -32,7 +32,21 @@ function App() : React.ReactElement {
           },
           animationTypeForReplace: 'pop',
         }} component={SettingsPage}  />
-        <RootStack.Screen name="Payment" component={PaymentPage} />
+        <RootStack.Screen
+          name="Payment"
+          component={PaymentPage}
+          options={{
+            headerStyle: {
+              backgroundColor: DELI_DARK,
+            },
+            headerBackTitleVisible: false,
+            headerTitleStyle: {
+              color: 'white',
+              fontWeight: 'bold',
+              fontSize: 26,
+            },
+          }}
+        />
         <RootStack.Screen name="Product" component={ProductDetailsPage} options={{ headerShown: false }} />
       </RootStack.Navigator>
     </NavigationContainer>

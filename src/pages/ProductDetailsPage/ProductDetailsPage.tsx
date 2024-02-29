@@ -104,10 +104,10 @@ const ProductDetailsPage = ({ navigation, route }: IPageProps) => {
             {item.name}
           </Text>
           <HeroButton
-            title='Pay'
+            title='Go to Payments'
             onPress={() => {
-              addToRecentOrder(item);
-              navigation.navigate('Home')
+              // addToRecentOrder(item);
+              navigation.navigate('Payment')
             }}
             textColor={DELI_TEXT}
           />
