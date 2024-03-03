@@ -15,7 +15,7 @@ const PaymentPage = ({ navigation }: IPageProps) => {
     <View style={styles.container}>
       <View style={styles.minor}/> 
       <View style={styles.main}>
-        
+        <Text style={styles.header}>You gonna pay with this card</Text>
       </View>
     </View>
   );

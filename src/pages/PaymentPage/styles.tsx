@@ -20,6 +20,16 @@ const styles = StyleSheet.create({
     height: '95%',
     width: '100%',
   },
+  header: {
+    color: '#FFFFFFE0',
+    fontSize: 18,
+    lineHeight: 24,
+    fontWeight: '400',
+    margin: 20,
+    paddingTop: 20,
+    paddingBottom: 20,
+    paddingLeft: 20,
+  }
 });
 
 export default styles;
