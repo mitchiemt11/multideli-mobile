@@ -8,9 +8,11 @@ interface IProps {
   onPress?: () => void,
   bgcolor?: string,
   textColor?: string,
+  borderColor?: string,
+  borderWidth?: number,
 }
 
-const HeroButton = ({ title, onPress, bgcolor, textColor }: IProps) => {
+const HeroButton = ({ title, onPress, bgcolor, textColor, borderColor, borderWidth }: IProps) => {
   const dynamicStyles = StyleSheet.create({
     Button: {
       width: '100%',
@@ -20,6 +22,8 @@ const HeroButton = ({ title, onPress, bgcolor, textColor }: IProps) => {
       marginTop: 25,
       alignItems: 'center',
       justifyContent: 'center',
+      borderWidth: borderWidth? borderWidth : 0,
+      borderColor: borderColor? borderColor : 'none',
     },
     ButtonText: {
       fontSize: 16,

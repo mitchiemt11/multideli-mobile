@@ -4,7 +4,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../../types/types';
 import styles from './styles';
 import PaymentCard from '../../components/PaymentCard/PaymentCard';
-// import HeroButton from '../../components/HeroButton/HeroButton';
+import HeroButton from '../../components/HeroButton/HeroButton';
 
 interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Payment'>;
@@ -22,10 +22,13 @@ const PaymentPage = ({ navigation }: IPageProps) => {
         icon={require('../../assets/images/visa.png')}
         title="**** **** **** 4242"
         />
-        {/* <HeroButton
-          title="Change Payment Method"
+        <HeroButton
+          title="Change payment method"
+          bgcolor='#FFFFFF1A'
+          borderColor= '#ffffff20'
+          borderWidth= {2}
           onPress={ () => navigation.navigate('Settings') }
-        /> */}
+        />
       </View>
     </View>
   );
