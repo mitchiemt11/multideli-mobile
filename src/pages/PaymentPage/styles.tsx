@@ -7,12 +7,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: DELI_DARK,
-    marginTop: 70,
-    borderTopLeftRadius: 44,
-    borderTopRightRadius: 44
   },
-  main : {
-    
+  minor: {
+    backgroundColor: DELI_DARK,
+    height: '5%',
+    width: '100%',
+  },
+  main: {
+    backgroundColor: '#222529',
+    borderTopLeftRadius: 44,
+    borderTopRightRadius: 44,
+    height: '95%',
+    width: '100%',
   },
 });
 
