@@ -35,16 +35,17 @@ const PaymentSuccessPage = ({ navigation }: IPageProps) => {
           </View>
         </View>
         <View style={styles.buttonContainer}>
-
-        <HeroButton
-          title="Scan QR code"
-        />
-        <HeroButton
-          title="Back to dashboard"
-          bgcolor='#FFFFFF1A'
-          borderColor='#ffffff20'
-          borderWidth={2}
-        />
+          <HeroButton
+            title="Scan QR code"
+            onPress={() => console.log('Open scan')}
+          />
+          <HeroButton
+            title="Back to dashboard"
+            bgcolor='#FFFFFF1A'
+            borderColor='#ffffff20'
+            borderWidth={2}
+            onPress={() => navigation.navigate('Home')}
+          />
         </View>
       </View>
     </View>
