@@ -68,16 +68,23 @@ const styles = StyleSheet.create({
     bottom: 0,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(0,0,0,0.5)', 
+    backgroundColor: '#0D0E0F7A',
+    //I'd go for a thiird party lib to implement a blur e
+    //effect but that would be overkill for this project
+    // backDropFilter: 'blur(10px)',  
   },
 
   loader: {
-    marginBottom: 10,
+    marginBottom: 20,
+    width: 100,
+    height: 100,
   },
 
   processingText: {
-    color: '#fff',
-    fontSize: 18,
+    color: '#FFFFFF',
+    fontSize: 20,
+    fontWeight: '400',
+    lineHeight: 22,
   }
 });
 

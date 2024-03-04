@@ -6,6 +6,7 @@ import styles from './styles';
 import PaymentCard from '../../components/PaymentCard/PaymentCard';
 import HeroButton from '../../components/HeroButton/HeroButton';
 import AddressCard from '../../components/AddressCard/AddressCard';
+import { DELI_BLUE } from '../../assets/common';
 
 interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, 'PaymentSuccess'>;
@@ -23,7 +24,7 @@ const PaymentPage = ({ navigation }: IPageProps) => {
 
     setTimeout(() => {
       setIsProcessing(false);
-      navigation.navigate('PaymentSuccess'); 
+      navigation.navigate('PaymentSuccess');
     }, 2000);
   }
 
@@ -69,20 +70,19 @@ const PaymentPage = ({ navigation }: IPageProps) => {
           borderColor='#ffffff20'
           borderWidth={2}
         />
-        {isProcessing && 
+      </View>
+      {isProcessing &&
         <View style={styles.processing}>
-        <ActivityIndicator 
-          size="large" 
-          color="#0000ff"
-          style={styles.loader} 
-        />
-      
-        <Text style={styles.processingText}>
-          Processing payment...
-        </Text>
-      </View>
+          <ActivityIndicator
+            size="large"
+            color={DELI_BLUE}
+            style={styles.loader}
+          />
+          <Text style={styles.processingText}>
+            Processing payment
+          </Text>
+        </View>
       }
-      </View>
     </View>
   );
 };
