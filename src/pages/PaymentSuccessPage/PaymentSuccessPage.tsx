@@ -34,6 +34,8 @@ const PaymentSuccessPage = ({ navigation }: IPageProps) => {
             <Text style={styles.quantity}> x1</Text>
           </View>
         </View>
+        <View style={styles.buttonContainer}>
+
         <HeroButton
           title="Scan QR code"
         />
@@ -43,6 +45,7 @@ const PaymentSuccessPage = ({ navigation }: IPageProps) => {
           borderColor='#ffffff20'
           borderWidth={2}
         />
+        </View>
       </View>
     </View>
   );

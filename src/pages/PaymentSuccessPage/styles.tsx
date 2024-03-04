@@ -83,6 +83,10 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     paddingLeft: 20,
   },
+  buttonContainer: {
+    justifyContent: 'center',
+    paddingTop: 40,
+  }
 });
 
 export default styles;
