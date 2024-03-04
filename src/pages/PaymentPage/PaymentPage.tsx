@@ -1,5 +1,5 @@
-import { View, Text } from 'react-native';
-import React from 'react';
+import { View, Text, ActivityIndicator } from 'react-native';
+import React, { useState } from 'react';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../../types/types';
 import styles from './styles';
@@ -8,11 +8,24 @@ import HeroButton from '../../components/HeroButton/HeroButton';
 import AddressCard from '../../components/AddressCard/AddressCard';
 
 interface IPageProps {
-  navigation: NativeStackNavigationProp<RootStackParamList, 'Payment'>;
+  navigation: NativeStackNavigationProp<RootStackParamList, 'PaymentSuccess'>;
 }
 
 const PaymentPage = ({ navigation }: IPageProps) => {
 
+  const [isProcessing, setIsProcessing] = useState(false);
+
+
+  const handlePayment = () => {
+    setIsProcessing(true);
+
+    // API call to process payment
+
+    setTimeout(() => {
+      setIsProcessing(false);
+      navigation.navigate('PaymentSuccess'); 
+    }, 2000);
+  }
 
   return (
     <View style={styles.container}>
@@ -40,11 +53,15 @@ const PaymentPage = ({ navigation }: IPageProps) => {
           <Text style={styles.price}>- R5</Text>
         </View>
         <View style={styles.priceContainer}>
-          <Text style={styles.item}> X1 item</Text>
-          <Text style={styles.price}>Total R30</Text>
+          <Text style={styles.itemNumber}> X1 item</Text>
+          <Text style={styles.price}>
+            <Text style={styles.total}>Total </Text>
+            R30
+          </Text>
         </View>
         <HeroButton
           title="Pay now"
+          onPress={handlePayment}
         />
         <HeroButton
           title="Choose More"
@@ -52,6 +69,19 @@ const PaymentPage = ({ navigation }: IPageProps) => {
           borderColor='#ffffff20'
           borderWidth={2}
         />
+        {isProcessing && 
+        <View style={styles.processing}>
+        <ActivityIndicator 
+          size="large" 
+          color="#0000ff"
+          style={styles.loader} 
+        />
+      
+        <Text style={styles.processingText}>
+          Processing payment...
+        </Text>
+      </View>
+      }
       </View>
     </View>
   );

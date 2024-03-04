@@ -33,11 +33,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent:'space-between',
     paddingRight: 20,
-    
+    paddingBottom: 10,
   },
   item: {
     color: '#FFFFFFE0',
     fontSize: 18,
+    lineHeight: 24,
+    fontWeight: '400',
+    paddingLeft: 20,
+  },
+  itemNumber: {
+    color: '#CBFF98',
+    fontSize: 16,
     lineHeight: 24,
     fontWeight: '400',
     paddingLeft: 20,
@@ -49,6 +56,28 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     color: 'white'
     
+  },
+  total: {
+    color: '#FFFFFFA3'
+  },
+  processing: {
+    position: 'absolute',
+    top: 0, 
+    left: 0,
+    right: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)', 
+  },
+
+  loader: {
+    marginBottom: 10,
+  },
+
+  processingText: {
+    color: '#fff',
+    fontSize: 18,
   }
 });
 

@@ -8,6 +8,7 @@ import HomePage from '../pages/HomePage/HomePage';
 import WelcomePage from '../pages/WelcomePage/WelcomePage';
 import SettingsPage from '../pages/SetttingsPage/SettingsPage';
 import PaymentPage from '../pages/PaymentPage/PaymentPage';
+import PaymentSuccessPage from '../pages/PaymentSuccessPage/PaymentSuccessPage';
 import ProductDetailsPage from '../pages/ProductDetailsPage/ProductDetailsPage';
 import { RootStack } from '../../types/types';
 import SplashPage from '../pages/SplashPage/SplashPage';
@@ -45,6 +46,23 @@ function App() : React.ReactElement {
               fontWeight: 'bold',
               fontSize: 26,
             },
+          }}
+        />
+        <RootStack.Screen
+          name="PaymentSuccess"
+          component={PaymentSuccessPage}
+          options={{
+            headerStyle: {
+              backgroundColor: DELI_DARK,
+            },
+            headerTitle:'Payment',
+            headerBackTitleVisible: false,
+            headerTitleStyle: {
+              color: 'white',
+              fontWeight: 'bold',
+              fontSize: 26,
+            },
+            animationTypeForReplace: 'pop',
           }}
         />
         <RootStack.Screen name="Product" component={ProductDetailsPage} options={{ headerShown: false }} />
