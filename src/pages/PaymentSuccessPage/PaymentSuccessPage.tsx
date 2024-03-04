@@ -21,20 +21,18 @@ const PaymentSuccessPage = ({ navigation }: IPageProps) => {
           <Image source={require('../../assets/images/payment.png')} style={styles.centerImage} />
         </View>
         <Text style={styles.centerText}>Payment successful</Text>
-        <View style={styles.priceContainer}>
-          <Text style={styles.item}>Beef Cheeseburger</Text>
-          <Text style={styles.price}>- R25</Text>
-        </View>
-        <View style={styles.priceContainer}>
-          <Text style={styles.item}>Delivery fee</Text>
-          <Text style={styles.price}>- R5</Text>
-        </View>
-        <View style={styles.priceContainer}>
-          <Text style={styles.itemNumber}> X1 item</Text>
-          <Text style={styles.price}>
-            <Text style={styles.total}>Total </Text>
-            R30
-          </Text>
+        <Text style={styles.scanText}>
+          Scan QR code when delivery has
+          arrived at your location
+        </Text>
+        <View style={styles.orderContainer}>
+          <View style={styles.orderItem}>
+            <Image source={require('../../assets/images/product.png')} style={styles.orderItemImage} />
+            <Text style={styles.item}>Beef Cheeseburger</Text>
+          </View>
+          <View style={styles.quantityContainer}>
+            <Text style={styles.quantity}> x1</Text>
+          </View>
         </View>
         <HeroButton
           title="Scan QR code"
