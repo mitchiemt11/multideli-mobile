@@ -29,6 +29,26 @@ const styles = StyleSheet.create({
     margin: 20,
     paddingTop: 20,
   },
+  imageContainer: {
+    width: '100%',
+    height: 200,
+    overflow: 'hidden',
+    borderTopLeftRadius: 44,
+    borderTopRightRadius: 44,
+  },
+  centerImage: {
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
+    alignSelf: 'center',
+  },
+  centerText: {
+    textAlign: 'center',
+    color: '#FFFFFF',
+    fontSize: 24,
+    lineHeight: 28,
+    fontWeight: '700',
+  },
   priceContainer: {
     flexDirection: 'row',
     justifyContent:'space-between',

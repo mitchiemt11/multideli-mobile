@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import React from 'react';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../../types/types';
@@ -17,6 +17,10 @@ const PaymentSuccessPage = ({ navigation }: IPageProps) => {
       <View style={styles.minor} />
       <View style={styles.main}>
         <AddressSmall />
+        <View style={styles.imageContainer}>
+          <Image source={require('../../assets/images/payment.png')} style={styles.centerImage} />
+        </View>
+        <Text style={styles.centerText}>Payment successful</Text>
         <View style={styles.priceContainer}>
           <Text style={styles.item}>Beef Cheeseburger</Text>
           <Text style={styles.price}>- R25</Text>
