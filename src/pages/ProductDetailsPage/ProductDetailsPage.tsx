@@ -106,8 +106,8 @@ const ProductDetailsPage = ({ navigation, route }: IPageProps) => {
           <HeroButton
             title='Go to Payments'
             onPress={() => {
-              // addToRecentOrder(item);
-              navigation.navigate('Payment')
+              sheetRef.current?.close();
+              navigation.navigate('Payment', { item: item });
             }}
             textColor={DELI_TEXT}
           />

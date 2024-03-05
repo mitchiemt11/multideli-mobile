@@ -10,7 +10,7 @@ interface IPageProps {
 }
 
 export interface Item {
-  id: string;
+  id: number;
   image: string;
   name: string;
   description: string;
@@ -23,8 +23,6 @@ export interface Item {
 const ItemList = ({navigation}: IPageProps) => {
 
   const list = useSelector((state: {list: Item[]}) => state.list);
-
-  console.log("✅", list)
 
   return (
     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
