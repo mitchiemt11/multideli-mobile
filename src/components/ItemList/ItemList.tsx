@@ -18,6 +18,7 @@ export interface Item {
   calories: string;
   info: string;
   price: number;
+  displayImage: string;
 }
 
 const ItemList = ({navigation}: IPageProps) => {

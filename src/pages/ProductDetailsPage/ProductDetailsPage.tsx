@@ -31,7 +31,7 @@ const ProductDetailsPage = ({ navigation, route }: IPageProps) => {
   const sheetRef = useRef<BottomSheetMethods>(null)
   return (
     <View style={styles.container}>
-      <Image source={require('../../assets/images/product_burger.png')} style={styles.image} />
+      <Image source={item.displayImage} style={styles.image} />
       <View style={styles.textContainer}>
         <Text style={styles.header}>{item.name}</Text>
         <View style={styles.descriptionContainer}>
