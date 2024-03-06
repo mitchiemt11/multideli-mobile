@@ -57,4 +57,4 @@ const SettingsPage = ({navigation}: IProps) => {
   )
 }
 
-export default SettingsPage
+export default SettingsPage;

@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   Scroll: {
-    marginBottom: 15
+    marginBottom: 100
 
   },
   Location: {
