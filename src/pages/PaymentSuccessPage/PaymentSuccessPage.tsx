@@ -41,7 +41,7 @@ const PaymentSuccessPage = ({ navigation, route }: IPageProps) => {
         </Text>
         <View style={styles.orderContainer}>
           <View style={styles.orderItem}>
-            <Image source={item.image} style={styles.orderItemImage} />
+            <Image source={item.displayImage} style={styles.orderItemImage} />
             <Text style={styles.item}>{item.name}</Text>
           </View>
           <View style={styles.quantityContainer}>
