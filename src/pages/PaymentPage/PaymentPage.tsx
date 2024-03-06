@@ -83,8 +83,10 @@ const PaymentPage = ({ navigation, route }: IPageProps) => {
           </Text>
         </View>
         <HeroButton
-          title="Pay now"
+          title="Pay"
+          textColor='#0D0E0F'
           onPress={handlePayment}
+          source={require('../../assets/images/money.png')}
         />
         <HeroButton
           title="Choose More"
