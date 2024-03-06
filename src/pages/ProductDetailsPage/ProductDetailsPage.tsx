@@ -67,6 +67,7 @@ const ProductDetailsPage = ({ navigation, route }: IPageProps) => {
         <View style={styles.buttonContainer}>
           <SmallButton
             color={DELI_BLUE}
+            textColor={DELI_TEXT}
             title='Grab it'
             onPress={() => sheetRef.current?.open()}
           />

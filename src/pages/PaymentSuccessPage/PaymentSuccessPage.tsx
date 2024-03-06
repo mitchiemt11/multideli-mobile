@@ -8,6 +8,7 @@ import AddressSmall from '../../components/AddressSmall/AddressSmall';
 import { useSelector } from 'react-redux';
 import type { Item } from '../../components/ItemList/ItemList';
 import { RouteProp } from '@react-navigation/native';
+import { DELI_DARK, DELI_TEXT } from '../../assets/common';
 
 interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, 'PaymentSuccess'>;
@@ -51,7 +52,9 @@ const PaymentSuccessPage = ({ navigation, route }: IPageProps) => {
         <View style={styles.buttonContainer}>
           <HeroButton
             title="Scan QR code"
+            textColor={DELI_TEXT}
             onPress={() => console.log('Open scan')}
+            source={require('../../assets/images/scan.png')}
           />
           <HeroButton
             title="Back to dashboard"
