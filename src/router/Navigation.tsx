@@ -27,6 +27,9 @@ function App() : React.ReactElement {
           headerStyle: {
             backgroundColor: DELI_DARK,
           },
+          headerLeft: () => (
+            <BackButton />
+          ),
           headerBackTitleVisible: false,
           headerTitleStyle: {
             color: 'white',
