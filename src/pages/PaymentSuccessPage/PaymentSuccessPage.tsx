@@ -5,10 +5,11 @@ import { RootStackParamList } from '../../../types/types';
 import styles from './styles';
 import HeroButton from '../../components/HeroButton/HeroButton';
 import AddressSmall from '../../components/AddressSmall/AddressSmall';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import type { Item } from '../../components/ItemList/ItemList';
 import { RouteProp } from '@react-navigation/native';
-import { DELI_DARK, DELI_TEXT } from '../../assets/common';
+import { DELI_TEXT } from '../../assets/common';
+import { addOrder } from '../../features/addOrder/addOrderSlice';
 
 interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, 'PaymentSuccess'>;
@@ -19,9 +20,15 @@ const PaymentSuccessPage = ({ navigation, route }: IPageProps) => {
 
 
   const items = useSelector((state: {list: Item[]}) => state.list);
+  //dispatch an action to add to store
+  const dispatch = useDispatch();
+
+  //create a function to dispatch that is called when button is clicked. it should use the addOrder reducer
+  const addToRecentOrder = () => {
+    dispatch(addOrder(route.params?.item));
+  }
 
   const item = items.find(item => Number(item.id) === Number(route.params?.item.id)); //why. Tis not viable
-
 
   if(!item) {
     return <Text>Item not found</Text>
@@ -61,7 +68,10 @@ const PaymentSuccessPage = ({ navigation, route }: IPageProps) => {
             bgcolor='#FFFFFF1A'
             borderColor='#ffffff20'
             borderWidth={2}
-            onPress={() => navigation.navigate('Home')}
+            onPress={() => {
+              addToRecentOrder();
+              navigation.navigate('Home')
+            }}
           />
         </View>
       </View>

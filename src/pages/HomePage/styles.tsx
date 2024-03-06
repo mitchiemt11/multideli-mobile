@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
   },
   Scroll: {
     marginBottom: 100
-
   },
   Location: {
     marginTop: 20,

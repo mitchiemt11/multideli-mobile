@@ -2,8 +2,9 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface Order {
-  name: string;
   id: number;
+  date: Date;
+  name: string;
   image: string;
   displayImage: string;
   description: string;
@@ -18,6 +19,7 @@ export interface OrderState extends Array<Order> { }
 const initialState: OrderState = [
   {
     id: 1,
+    date: new Date(),
     name: 'Beef Cheeseburger',
     price: 25,
     grams: 100,
@@ -29,6 +31,7 @@ const initialState: OrderState = [
   },
   {
     id: 2,
+    date: new Date(),
     name: 'Veg Salad',
     price: 30,
     grams: 456,
@@ -40,6 +43,7 @@ const initialState: OrderState = [
   },
   {
     id: 3,
+    date: new Date(),
     name: 'Potato Salad',
     price: 90,
     grams: 450,
@@ -51,6 +55,7 @@ const initialState: OrderState = [
   },
   {
     id: 4,
+    date: new Date(),
     name: 'Bread Sandwich',
     price: 15,
     grams: 150,
@@ -64,6 +69,7 @@ const initialState: OrderState = [
   
   {
     id: 5,
+    date: new Date(),
     name: 'More',
     price: 25,
     grams: 100,
@@ -81,8 +87,9 @@ export const OrderSlice = createSlice({
   reducers: {
     listOrder: (state, action: PayloadAction<Order>) => {
       state.push({
-        name: action.payload.name,
         id: state.length + 1,
+        date: new Date(),
+        name: action.payload.name,
         image: action.payload.image,
         displayImage: action.payload.displayImage,
         description: action.payload.description,

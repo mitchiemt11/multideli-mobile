@@ -3,6 +3,7 @@ import orderReducer from '../features/addOrder/addOrderSlice'
 import listReducer from '../features/listOrderSlice/listOrderSlice'
 
 export const store = configureStore({
+  
   reducer: {
     order: orderReducer,
     list: listReducer

@@ -11,6 +11,7 @@ interface IPageProps {
 
 export interface Item {
   id: number;
+  date: Date;
   image: string;
   name: string;
   description: string;
