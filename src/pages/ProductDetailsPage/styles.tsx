@@ -105,8 +105,9 @@ const styles = StyleSheet.create({
 
   },
   bottomSheet: { 
-    backgroundColor: '#131516'
+    backgroundColor: '#131516',
   },
+  bottomContainer: {},
   orderText: {
     color: 'white',
     fontSize: 24,

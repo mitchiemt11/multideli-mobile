@@ -80,9 +80,9 @@ const ProductDetailsPage = ({ navigation, route }: IPageProps) => {
 
         </View>
       </View>
-      <View >
+      <View style={styles.bottomContainer}>
         <BottomSheet
-          containerHeight={500}
+          height={'35%'}
           style={styles.bottomSheet}
           ref={sheetRef}>
           <Text style={styles.orderText}>
