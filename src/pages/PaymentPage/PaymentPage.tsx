@@ -7,7 +7,7 @@ import PaymentCard from '../../components/PaymentCard/PaymentCard';
 import HeroButton from '../../components/HeroButton/HeroButton';
 import AddressCard from '../../components/AddressCard/AddressCard';
 import { DELI_BLUE } from '../../assets/common';
-import { useDispatch, useSelector } from'react-redux';
+import { useSelector } from'react-redux';
 import type { Item } from '../../components/ItemList/ItemList';
 import { RouteProp } from '@react-navigation/native';
 
@@ -20,18 +20,10 @@ interface IPageProps {
 const PaymentPage = ({ navigation, route }: IPageProps) => {
 
   const [isProcessing, setIsProcessing] = useState(false);
+
   const items = useSelector((state: {list: Item[]}) => state.list);
 
-  console.log('🔥', route.params.item.id);
-  console.log("⭕️⭕️⭕️⭕️⭕️", items);
-  console.log("⭕️⭕️⭕️ldfmvlmfsmvlmflsv⭕️⭕️", JSON.stringify(items.find(
-    item => Number(item.id) === Number(route.params.item.id)
-    ), null, 2));
-
   const item = items.find(item => Number(item.id) === Number(route.params.item.id));
-  console.log("⭕️⭕️⭕️-------------⭕️⭕️", item?.id);
-
-  console.log("⭕️", item);
 
   if(!item) {
     return <Text>Item not found</Text>

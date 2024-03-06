@@ -52,7 +52,7 @@ const SettingsPage = ({navigation}: IProps) => {
         bgcolor="red"
         onPress={() => console.log('Log out')}
       />
-      {/* <BottomNav navigation={navigation}/> */}
+      <BottomNav navigation={navigation}/>
     </View>
   )
 }

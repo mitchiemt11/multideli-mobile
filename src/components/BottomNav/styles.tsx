@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 import { DELI_DARK, DELI_BLUE } from '../../assets/common';
 
 const styles = StyleSheet.create({
+  
   container: {
     flexDirection: 'row',
     backgroundColor: DELI_DARK,
@@ -10,6 +11,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     height: 110,
     borderTopWidth: 1,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    position: 'absolute',
     borderColor: '#6E757C'
   },
   scan: {
@@ -44,3 +49,4 @@ const styles = StyleSheet.create({
 });
 
 export default styles;
+

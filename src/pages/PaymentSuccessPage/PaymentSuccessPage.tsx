@@ -53,7 +53,7 @@ const PaymentSuccessPage = ({ navigation, route }: IPageProps) => {
           <HeroButton
             title="Scan QR code"
             textColor={DELI_TEXT}
-            onPress={() => console.log('Open scan')}
+            onPress={() => {}}
             source={require('../../assets/images/scan.png')}
           />
           <HeroButton
