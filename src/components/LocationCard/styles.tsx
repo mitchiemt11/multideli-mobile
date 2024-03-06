@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     marginTop: 25,
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row',
   },
   ButtonText: {
     fontSize: 16,
@@ -48,6 +49,11 @@ const styles = StyleSheet.create({
     color: 'white',
     lineHeight: 22,
   },
+  directionsIcon: {
+    width: 21,
+    height: 21,
+    marginRight: 10
+  }
 });
 
 export default styles;
