@@ -1,15 +1,16 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React, { useRef } from 'react'
+import { useSelector } from 'react-redux';
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../../types/types';
-import { DELI_BLUE, DELI_TEXT } from '../../assets/common';
-import SmallButton from '../../components/SmallButton/SmallButton';
-import BottomSheet, { BottomSheetMethods } from '@devvie/bottom-sheet';
-import HeroButton from '../../components/HeroButton/HeroButton';
-import { useDispatch, useSelector } from 'react-redux';
-import { Item } from '../../components/ItemList/ItemList';
 import type { RouteProp } from '@react-navigation/native';
-import { addOrder } from '../../features/addOrder/addOrderSlice';
+import { RootStackParamList } from '../../../types/types';
+
+import SmallButton from '../../components/SmallButton/SmallButton';
+import HeroButton from '../../components/HeroButton/HeroButton';
+import BottomSheet, { BottomSheetMethods } from '@devvie/bottom-sheet';
+import { Item } from '../../components/ItemList/ItemList';
+
+import { DELI_BLUE, DELI_TEXT } from '../../assets/common';
 import styles from './styles';
 
 interface IPageProps {
@@ -20,7 +21,6 @@ interface IPageProps {
 const ProductDetailsPage = ({ navigation, route }: IPageProps) => {
 
   const items = useSelector((state: {list: Item[]}) => state.list);
-  const dispatch = useDispatch()
 
   const item = items.find(item => Number(item.id) === Number(route.params.id)); //why
 
@@ -28,14 +28,10 @@ const ProductDetailsPage = ({ navigation, route }: IPageProps) => {
     return <Text>Item not found</Text>
   }
 
-  const addToRecentOrder = (item: Item) => {
-    dispatch(addOrder(item));
-  }
-
   const sheetRef = useRef<BottomSheetMethods>(null)
   return (
     <View style={styles.container}>
-      <Image source={require('../../assets/images/product.png')} style={styles.image} />
+      <Image source={require('../../assets/images/product_burger.png')} style={styles.image} />
       <View style={styles.textContainer}>
         <Text style={styles.header}>{item.name}</Text>
         <View style={styles.descriptionContainer}>
