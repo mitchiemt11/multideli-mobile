@@ -13,6 +13,8 @@ import ProductDetailsPage from '../pages/ProductDetailsPage/ProductDetailsPage';
 import { RootStack } from '../../types/types';
 import SplashPage from '../pages/SplashPage/SplashPage';
 import { DELI_DARK } from '../assets/common';
+import BackButton from '../components/BackButton/BackButton';
+import Cart from '../components/Cart/Cart';
 
 function App() : React.ReactElement {
   return (
@@ -55,7 +57,13 @@ function App() : React.ReactElement {
             headerStyle: {
               backgroundColor: DELI_DARK,
             },
-            headerTitle:'Payment',
+            headerTitle:'Payment Success',
+            headerRight: () => (
+              <Cart />
+            ),
+            headerLeft: () => (
+              <BackButton />
+            ),
             headerBackTitleVisible: false,
             headerTitleStyle: {
               color: 'white',
