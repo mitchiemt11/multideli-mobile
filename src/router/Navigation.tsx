@@ -36,6 +36,7 @@ function App() : React.ReactElement {
             fontWeight: 'bold',
             fontSize: 26,
           },
+          headerTitleAlign: 'center',
           animationTypeForReplace: 'pop',
         }} component={SettingsPage}  />
         <RootStack.Screen
@@ -45,6 +46,13 @@ function App() : React.ReactElement {
             headerStyle: {
               backgroundColor: DELI_DARK,
             },
+            headerTitleAlign: 'center',
+            headerRight: () => (
+              <Cart />
+            ),
+            headerLeft: () => (
+              <BackButton />
+            ),
             headerBackTitleVisible: false,
             headerTitleStyle: {
               color: 'white',
@@ -60,6 +68,7 @@ function App() : React.ReactElement {
             headerStyle: {
               backgroundColor: DELI_DARK,
             },
+            headerTitleAlign: 'center',
             headerTitle:'Payment Success',
             headerRight: () => (
               <Cart />
