@@ -8,7 +8,7 @@ export type RootStackParamList = {
   Settings: undefined;
   Payment: {item: Item};
   PaymentSuccess: {item: Item};
-  Product: { id: number };
+  Product: { id: number, item: Item };
 };
 
 export const RootStack = createNativeStackNavigator<RootStackParamList>();

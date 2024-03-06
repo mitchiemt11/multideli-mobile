@@ -91,6 +91,7 @@ const PaymentPage = ({ navigation, route }: IPageProps) => {
           bgcolor='#FFFFFF1A'
           borderColor='#ffffff20'
           borderWidth={2}
+          onPress={() => navigation.navigate('Home')}
         />
       </View>
       {isProcessing &&

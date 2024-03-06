@@ -21,7 +21,7 @@ const ProductDetailsPage = ({ navigation, route }: IPageProps) => {
   const items = useSelector((state: {list: Item[]}) => state.list);
   const dispatch = useDispatch()
 
-  const item = items.find(item => Number(item.id) === Number(route.params.id));
+  const item = items.find(item => Number(item.id) === Number(route.params.id)); //why
 
   if(!item) {
     return <Text>Item not found</Text>
