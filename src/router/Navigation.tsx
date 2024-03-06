@@ -69,7 +69,7 @@ function App() : React.ReactElement {
               backgroundColor: DELI_DARK,
             },
             headerTitleAlign: 'center',
-            headerTitle:'Payment Success',
+            headerTitle:'Payment',
             headerRight: () => (
               <Cart />
             ),
