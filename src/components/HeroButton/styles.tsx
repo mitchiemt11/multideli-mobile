@@ -4,6 +4,7 @@ import { DELI_TEXT, DELI_BLUE } from "../../assets/common";
 const styles = StyleSheet.create({
   Container: {
     marginHorizontal: 20,
+    flexDirection: "row",
   },
   Button: {
     width: '100%',
@@ -20,6 +21,11 @@ const styles = StyleSheet.create({
     color: DELI_TEXT,
     lineHeight: 22,
   },
+  Image: {
+    width: 24,
+    height: 24,
+    marginLeft: 10,
+  }
 });
 
 export default styles;

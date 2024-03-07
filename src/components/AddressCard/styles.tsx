@@ -2,32 +2,35 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#222529',
+    backgroundColor: '#FFFFFF0F',
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
     borderRadius: 8,
+    flexDirection: 'row',
   },
   locationIcon: {
-    width: 20,
-    height: 20,
+    width: 15,
+    height: 18,
     marginBottom: 10
   },
   locationName: {
     fontSize: 16,
     fontWeight: '400',
     lineHeight: 22,
-    color: 'white'
+    color: 'white',
+    marginLeft: 10,
   },
   locationID: {
     fontSize: 16,
+    marginLeft: 10,
     color: '#FFFFFFA3',
     lineHeight: 22,
     fontWeight: '400'
   },
   Button: {
     width: '100%',
-    backgroundColor: '#FFFFFF1A',
+    backgroundColor: '#FddFFFF1A',
     height: 50,
     borderRadius: 25,
     borderWidth: 2,
@@ -35,7 +38,6 @@ const styles = StyleSheet.create({
     marginTop: 25,
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'row',
   },
   ButtonText: {
     fontSize: 16,
@@ -43,11 +45,6 @@ const styles = StyleSheet.create({
     color: 'white',
     lineHeight: 22,
   },
-  directionsIcon: {
-    width: 21,
-    height: 21,
-    marginRight: 10
-  }
 });
 
 export default styles;

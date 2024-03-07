@@ -2,9 +2,12 @@ import { StyleSheet } from "react-native";
 import { DELI_TEXT, DELI_BLUE } from "../../assets/common";
 
 const styles = StyleSheet.create({
-  Container: {
+Container: {
     flex: 1,
-    backgroundColor: DELI_BLUE
+    width: '100%',
+    height: '100%',
+    backgroundColor: DELI_BLUE,
+
   },
   Header: {
     fontWeight: '500',

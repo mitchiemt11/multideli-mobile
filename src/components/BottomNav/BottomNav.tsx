@@ -12,7 +12,7 @@ function ActionButton() {
   return (
     <TouchableOpacity
       style={styles.scan}
-      onPress={() => console.log("Pressed")}
+      onPress={() => {}}
     >
       <Image source={require('../../assets/images/scan.png')} style={styles.scanIcon} />
     </TouchableOpacity>

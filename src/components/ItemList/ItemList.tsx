@@ -3,50 +3,38 @@ import React from 'react';
 import styles from './styles';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../../types/types';
+import { useSelector } from'react-redux';
 
 interface IPageProps {
   navigation: NativeStackNavigationProp<RootStackParamList, keyof RootStackParamList>;
 }
 
-const items = [
-  {
-    id: 1,
-    name: 'Burger',
-    image: require('../../assets/images/burger_small.png')
-  },
-  {
-    id: 2,
-    name: 'Sandwich',
-    image: require('../../assets/images/sandwich.png'),
-
-  },
-  {
-    id: 3,
-    name: 'Salad',
-    image: require('../../assets/images/salad.png')
-  },
-  {
-    id: 4,
-    name: 'Pizza',
-    image: require('../../assets/images/pizza.png')
-  },
-  {
-    id: 5,
-    name: 'More',
-    image: require('../../assets/images/more.png')
-  },
-]
+export interface Item {
+  id: number;
+  date: Date;
+  image: string;
+  name: string;
+  description: string;
+  grams: string;
+  calories: string;
+  info: string;
+  price: number;
+  displayImage: string;
+}
 
 const ItemList = ({navigation}: IPageProps) => {
+
+  const list = useSelector((state: {list: Item[]}) => state.list);
+
   return (
     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       <View style={styles.container}>
-        {items.map(item => (
+        {list.map((item: Item)  => (
           <View key={item.id} style={styles.itemContainer}>
             <TouchableOpacity
               onPress={() =>
                 navigation.navigate('Product', {
-                  productId: item.id, // pass product id as param
+                  id: Number(item.id),
                 })
               }>
               <Image source={item.image} style={styles.itemImage} />
