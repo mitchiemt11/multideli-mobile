@@ -87,3 +87,10 @@ This is one way to run the app — you can also run it directly from within Andr
 - React Navigation was employed for easy navigation between screens, offering a straightforward API and support for various navigation patterns with the `route` and `navigation` props playing a bigger part in moving betweenn screens at the same time passing the correct data to the components.
 - The `useSelector` hook provided by Redux was utilized to selectively extract data from the global state, improving performance by avoiding unnecessary re-renders.
 - Additionally, I integrated a bottom sheet local library to enhance user experience, providing a smooth and intuitive way to interact with certain features without obstructing the main content.
+
+
+## 📄 License
+
+This app is [MIT licensed](./LICENSE).
+
+-------
