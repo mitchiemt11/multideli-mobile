@@ -34,7 +34,9 @@ Multi Deli is your go-to mobile app for managing food orders effortlessly. With 
 
 ## Setup
 - Download or clone the repository
-- Run ` yarn install`
+  `git clone https://github.com/mitchiemt11/multideli-mobile.git`
+
+- To install all dependencies, run ` yarn install`
 
  
 ## Step 1: Start the Metro Server
