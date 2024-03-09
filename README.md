@@ -7,7 +7,7 @@ Multi Deli - Dev Challenge
 ## About The App
 Multi Deli is your go-to mobile app for managing food orders effortlessly. With a clean and intuitive interface, it allows users to view their list of orders seamlessly. Easily add new orders with just a few taps and watch as your main screen updates in real-time. Simplified features ensure a smooth user experience, making order management a breeze. Whether you're a busy professional or a casual shopper, Multi Deli has got you covered!
 
-## Screenshots
+## Previews
 <img width="250" height="550"  alt="Demo1" src="https://github.com/mitchiemt11/multideli-mobile/assets/74592107/3961e4fc-8948-4617-8da6-e9a4f6a27f74">
 <img width="250" height="550"  alt="Demo1" src="https://github.com/mitchiemt11/multideli-mobile/assets/74592107/120e8548-53f8-4a03-924b-20b928f90fdd">
 
